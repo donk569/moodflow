@@ -1,0 +1,99 @@
+<h2>首页：情绪选择 v2 — 表情版</h2>
+<p class="subtitle">渐变圆球 → 可爱表情，更直觉、更亲切</p>
+
+<div class="mockup">
+  <div class="mockup-header">🏠 首页 — 情绪选择</div>
+  <div class="mockup-body" style="background: #faf8f5; padding: 28px 20px; max-width: 400px; margin: 0 auto; border-radius: 24px;">
+
+    <!-- Top section -->
+    <div style="text-align: center; padding: 16px 0 28px;">
+      <p style="font-size: 13px; color: #b8a99a; letter-spacing: 1px; margin: 0;">2026.06.03 · 星期三</p>
+      <p style="font-size: 24px; color: #5c4a3a; font-weight: 300; margin: 12px 0 0; line-height: 1.4;">
+        你现在感觉如何？
+      </p>
+    </div>
+
+    <!-- Emotion emoji grid - 3x3 -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; text-align: center;">
+      <div onclick="toggleSelect(this)" data-choice="happy" style="cursor: pointer; padding: 10px; border-radius: 20px; transition: all 0.2s;">
+        <div style="font-size: 46px; line-height: 1.3;">😊</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 4px 0 0;">开心</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="anxious" style="cursor: pointer; padding: 10px; border-radius: 20px; transition: all 0.2s;">
+        <div style="font-size: 46px; line-height: 1.3;">😰</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 4px 0 0;">焦虑</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="sad" style="cursor: pointer; padding: 10px; border-radius: 20px; transition: all 0.2s;">
+        <div style="font-size: 46px; line-height: 1.3;">😢</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 4px 0 0;">难过</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="tired" style="cursor: pointer; padding: 10px; border-radius: 20px; transition: all 0.2s;">
+        <div style="font-size: 46px; line-height: 1.3;">😫</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 4px 0 0;">疲惫</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="irritated" style="cursor: pointer; padding: 10px; border-radius: 20px; transition: all 0.2s;">
+        <div style="font-size: 46px; line-height: 1.3;">😤</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 4px 0 0;">烦躁</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="empty" style="cursor: pointer; padding: 10px; border-radius: 20px; transition: all 0.2s;">
+        <div style="font-size: 46px; line-height: 1.3;">😶</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 4px 0 0;">空虚</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="calm" style="cursor: pointer; padding: 10px; border-radius: 20px; transition: all 0.2s;">
+        <div style="font-size: 46px; line-height: 1.3;">😌</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 4px 0 0;">平静</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="bored" style="cursor: pointer; padding: 10px; border-radius: 20px; transition: all 0.2s;">
+        <div style="font-size: 46px; line-height: 1.3;">😐</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 4px 0 0;">无聊</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="excited" style="cursor: pointer; padding: 10px; border-radius: 20px; transition: all 0.2s;">
+        <div style="font-size: 46px; line-height: 1.3;">🤩</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 4px 0 0;">兴奋</p>
+      </div>
+    </div>
+
+    <!-- Intensity slider -->
+    <div style="margin-top: 32px; padding: 0 8px;">
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: #b8a99a; margin-bottom: 8px;">
+        <span>轻微</span><span>中等</span><span>强烈</span>
+      </div>
+      <div style="height: 4px; background: #e8e0d8; border-radius: 2px; position: relative;">
+        <div style="width: 48%; height: 4px; background: #c8a080; border-radius: 2px;"></div>
+        <div style="width: 20px; height: 20px; border-radius: 50%; background: #fff; border: 2px solid #c8a080; position: absolute; top: -8px; left: 45%; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"></div>
+      </div>
+      <p style="text-align: center; font-size: 14px; color: #5c4a3a; margin: 16px 0 0;">强度：5</p>
+    </div>
+
+    <!-- CTA -->
+    <button class="mock-button" style="width: 100%; margin-top: 24px; padding: 16px; background: #c8a080; color: white; border: none; border-radius: 16px; font-size: 16px; cursor: pointer; letter-spacing: 0.5px;">
+      看看可以做什么 →
+    </button>
+  </div>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>纯表情（当前版本）</h3>
+      <p>系统原生 emoji，轻量，适配所有平台</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>自定义插画</h3>
+      <p>请设计师画一套专属心情小人，独一无二，但成本高</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Emoji + 底色</h3>
+      <p>表情下面加一个柔和浅色圆底，每个情绪对应不同底色</p>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top: 16px;">你觉得哪种表现方式更好？或者对表情选择有自己的想法？</p>

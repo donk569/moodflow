@@ -1,0 +1,120 @@
+<h2>引导流程：首次打开 → 设置昵称和性别</h2>
+<p class="subtitle">3 步引导，温柔不冗长</p>
+
+<div class="mockup">
+  <div class="mockup-header">🌸 引导流程（Swipe 翻页）</div>
+  <div class="mockup-body" style="background: #faf8f5; padding: 32px 24px; max-width: 400px; margin: 0 auto; border-radius: 24px;">
+
+    <!-- Step 1: Welcome -->
+    <div style="border: 2px solid #e8e0d8; border-radius: 20px; padding: 24px; margin-bottom: 16px;">
+      <p style="font-size: 12px; color: #b8a99a; letter-spacing: 2px; text-align: center; margin: 0;">STEP 1/3</p>
+      <div style="font-size: 48px; text-align: center; margin: 16px 0;">🌈</div>
+      <h3 style="text-align: center; font-size: 22px; color: #5c4a3a; font-weight: 300; margin: 0;">
+        欢迎来到 MoodFlow
+      </h3>
+      <p style="text-align: center; font-size: 14px; color: #a89888; margin: 12px 0 0; line-height: 1.6;">
+        一个温柔的地方<br>记录你的每一种心情
+      </p>
+      <button class="mock-button" style="width: 100%; margin-top: 20px; padding: 14px; background: #c8a080; color: white; border: none; border-radius: 14px; font-size: 15px;">开始 →</button>
+    </div>
+
+    <!-- Step 2: Nickname -->
+    <div style="border: 2px solid #c8a080; border-radius: 20px; padding: 24px; margin-bottom: 16px;">
+      <p style="font-size: 12px; color: #b8a99a; letter-spacing: 2px; text-align: center; margin: 0;">STEP 2/3</p>
+      <div style="font-size: 36px; text-align: center; margin: 12px 0;">✏️</div>
+      <h3 style="text-align: center; font-size: 18px; color: #5c4a3a; font-weight: 300; margin: 0;">
+        怎么称呼你？
+      </h3>
+      <input class="mock-input" style="width: 100%; margin-top: 16px; padding: 14px; border-radius: 14px; border: 1.5px solid #e0d8cc; text-align: center; font-size: 16px;" placeholder="你的昵称">
+    </div>
+
+    <!-- Step 3: Gender -->
+    <div style="border: 2px solid #e8e0d8; border-radius: 20px; padding: 24px; margin-bottom: 16px;">
+      <p style="font-size: 12px; color: #b8a99a; letter-spacing: 2px; text-align: center; margin: 0;">STEP 3/3</p>
+      <div style="font-size: 36px; text-align: center; margin: 12px 0;">💫</div>
+      <h3 style="text-align: center; font-size: 18px; color: #5c4a3a; font-weight: 300; margin: 0;">
+        选择一个陪伴角色
+      </h3>
+      <div style="display: flex; gap: 16px; margin-top: 20px;">
+        <div onclick="toggleSelect(this)" data-choice="male" style="cursor: pointer; flex: 1; padding: 20px 12px; border-radius: 18px; border: 2px solid #e0d8cc; text-align: center; background: #f8fcfe;">
+          <div style="width: 56px; height: 56px; border-radius: 50%; background: #e8f4fd; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 30px;">🐶</div>
+          <p style="font-size: 15px; color: #5c4a3a; margin: 10px 0 0; font-weight: 500;">男生</p>
+          <p style="font-size: 12px; color: #b8a99a; margin: 4px 0 0;">小狗陪伴</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="female" style="cursor: pointer; flex: 1; padding: 20px 12px; border-radius: 18px; border: 2px solid #e0d8cc; text-align: center; background: #fef8fa;">
+          <div style="width: 56px; height: 56px; border-radius: 50%; background: #ffe8f0; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 30px;">🐱</div>
+          <p style="font-size: 15px; color: #5c4a3a; margin: 10px 0 0; font-weight: 500;">女生</p>
+          <p style="font-size: 12px; color: #b8a99a; margin: 4px 0 0;">小猫陪伴</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="mock-button" style="width: 100%; padding: 16px; background: #c8a080; color: white; border: none; border-radius: 16px; font-size: 16px;">
+      🎉 开始我的情绪之旅
+    </button>
+  </div>
+</div>
+
+<hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;" />
+
+<h2>记录页：完成行动后记录</h2>
+<p class="subtitle">支持图文音，轻量不压迫</p>
+
+<div class="mockup">
+  <div class="mockup-header">📝 记录页 — 记录此刻</div>
+  <div class="mockup-body" style="background: #faf8f5; padding: 28px 20px; max-width: 400px; margin: 0 auto; border-radius: 24px;">
+
+    <!-- Context -->
+    <div style="text-align: center; padding: 0 0 20px;">
+      <span style="background: #f0f8e8; padding: 6px 14px; border-radius: 14px; font-size: 13px; color: #7aaa6e;">🌿 已完成：深呼吸</span>
+      <p style="font-size: 18px; color: #5c4a3a; font-weight: 300; margin: 14px 0 0;">
+        做得很好 ✨<br><span style="font-size: 14px; color: #b8a99a;">想记录一下现在的感受吗？</span>
+      </p>
+    </div>
+
+    <!-- Photo picker -->
+    <div style="background: #fff; border-radius: 16px; padding: 16px; margin-bottom: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); display: flex; align-items: center; gap: 14px;">
+      <div style="width: 44px; height: 44px; border-radius: 12px; background: #fef0e0; display: flex; align-items: center; justify-content: center; font-size: 20px;">📷</div>
+      <div>
+        <p style="margin: 0; font-size: 15px; color: #5c4a3a;">添加照片</p>
+        <p style="margin: 2px 0 0; font-size: 12px; color: #b8a99a;">拍一张或从相册选</p>
+      </div>
+      <div style="margin-left: auto; color: #b8a99a; font-size: 14px;">+</div>
+    </div>
+
+    <!-- Text input -->
+    <div style="background: #fff; border-radius: 16px; padding: 16px; margin-bottom: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+      <textarea placeholder="写几句……（可选）" style="width: 100%; border: none; resize: none; font-size: 15px; color: #5c4a3a; font-family: inherit; outline: none; min-height: 80px; background: transparent;" placeholder-color="#ccc"></textarea>
+    </div>
+
+    <!-- Voice -->
+    <div style="background: #fff; border-radius: 16px; padding: 16px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); display: flex; align-items: center; gap: 14px;">
+      <div style="width: 44px; height: 44px; border-radius: 12px; background: #e8f0f8; display: flex; align-items: center; justify-content: center; font-size: 20px;">🎤</div>
+      <div>
+        <p style="margin: 0; font-size: 15px; color: #5c4a3a;">录制语音</p>
+        <p style="margin: 2px 0 0; font-size: 12px; color: #b8a99a;">说说今天的感受（最长 60 秒）</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <button class="mock-button" style="width: 100%; padding: 16px; background: #c8a080; color: white; border: none; border-radius: 16px; font-size: 16px; margin-bottom: 8px;">
+      ✅ 完成记录
+    </button>
+    <button style="width: 100%; padding: 14px; background: transparent; color: #b8a99a; border: none; font-size: 14px; cursor: pointer;">
+      跳过，直接打卡
+    </button>
+  </div>
+</div>
+
+<hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;" />
+
+<h3>记录页设计要点</h3>
+<ul>
+  <li>顶部显示<b>刚完成的行动</b>，形成上下文关联</li>
+  <li>三个录入区都是<b>可选</b>的，不强求——写不写都行</li>
+  <li>「跳过，直接打卡」给不想写的人一键出路，<b>不制造压力</b></li>
+  <li>语音最长 60 秒，防止变成日记压力</li>
+  <li>照片支持相机拍摄和相册选取</li>
+</ul>
+
+<p class="subtitle" style="margin-top: 16px;">引导流程 + 记录页的设计 OK 吗？有什么想调整的？</p>

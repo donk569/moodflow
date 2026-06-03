@@ -1,0 +1,121 @@
+<h2>首页 v3：Emoji + 柔和底色</h2>
+<p class="subtitle">每个情绪对应不同浅色圆底，更有温度</p>
+
+<div class="mockup">
+  <div class="mockup-header">🏠 首页 — 情绪选择</div>
+  <div class="mockup-body" style="background: #faf8f5; padding: 28px 20px; max-width: 400px; margin: 0 auto; border-radius: 24px;">
+
+    <!-- Top section -->
+    <div style="text-align: center; padding: 16px 0 28px;">
+      <p style="font-size: 13px; color: #b8a99a; letter-spacing: 1px; margin: 0;">2026.06.03 · 星期三</p>
+      <p style="font-size: 24px; color: #5c4a3a; font-weight: 300; margin: 12px 0 0; line-height: 1.4;">
+        你现在感觉如何？
+      </p>
+    </div>
+
+    <!-- Emotion emoji grid - 3x3 with colored backgrounds -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; text-align: center;">
+      <div onclick="toggleSelect(this)" data-choice="happy" style="cursor: pointer; padding: 8px; border-radius: 20px;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: #fff8e0; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">😊</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 6px 0 0;">开心</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="anxious" style="cursor: pointer; padding: 8px; border-radius: 20px;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: #fff0e8; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">😰</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 6px 0 0;">焦虑</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="sad" style="cursor: pointer; padding: 8px; border-radius: 20px;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: #e8f0f8; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">😢</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 6px 0 0;">难过</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="tired" style="cursor: pointer; padding: 8px; border-radius: 20px;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: #f0ece8; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">😫</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 6px 0 0;">疲惫</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="irritated" style="cursor: pointer; padding: 8px; border-radius: 20px;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: #fde8e0; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">😤</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 6px 0 0;">烦躁</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="empty" style="cursor: pointer; padding: 8px; border-radius: 20px;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: #f2f0ee; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">😶</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 6px 0 0;">空虚</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="calm" style="cursor: pointer; padding: 8px; border-radius: 20px;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: #e8f5e0; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">😌</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 6px 0 0;">平静</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="bored" style="cursor: pointer; padding: 8px; border-radius: 20px;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: #f2f0e8; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">😐</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 6px 0 0;">无聊</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="excited" style="cursor: pointer; padding: 8px; border-radius: 20px;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: #ffe8ec; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">🤩</div>
+        <p style="font-size: 13px; color: #8a7968; margin: 6px 0 0;">兴奋</p>
+      </div>
+    </div>
+
+    <!-- Intensity slider -->
+    <div style="margin-top: 28px; padding: 0 8px;">
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: #b8a99a; margin-bottom: 8px;">
+        <span>轻微</span><span>中等</span><span>强烈</span>
+      </div>
+      <div style="height: 4px; background: #e8e0d8; border-radius: 2px; position: relative;">
+        <div style="width: 48%; height: 4px; background: #c8a080; border-radius: 2px;"></div>
+        <div style="width: 20px; height: 20px; border-radius: 50%; background: #fff; border: 2px solid #c8a080; position: absolute; top: -8px; left: 45%; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"></div>
+      </div>
+    </div>
+
+    <button class="mock-button" style="width: 100%; margin-top: 24px; padding: 16px; background: #c8a080; color: white; border: none; border-radius: 16px; font-size: 16px; cursor: pointer; letter-spacing: 0.5px;">
+      看看可以做什么 →
+    </button>
+  </div>
+</div>
+
+<hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;" />
+
+<h2>推荐页：行动卡片</h2>
+<p class="subtitle">情绪选完后自然推到推荐页，展示适合当前状态的事情</p>
+
+<div class="mockup">
+  <div class="mockup-header">💡 推荐页 — 看看可以做什么</div>
+  <div class="mockup-body" style="background: #faf8f5; padding: 28px 20px; max-width: 400px; margin: 0 auto; border-radius: 24px;">
+
+    <!-- Context -->
+    <div style="text-align: center; padding: 0 0 20px;">
+      <span style="background: #fff0e8; padding: 8px 18px; border-radius: 20px; font-size: 14px; color: #8a6a58;">😰 焦虑 · 强度 5</span>
+      <p style="font-size: 18px; color: #5c4a3a; font-weight: 300; margin: 16px 0 0; line-height: 1.4;">
+        试着做些小事<br>让情绪慢慢降落
+      </p>
+    </div>
+
+    <!-- Main card -->
+    <div style="background: #fff; border-radius: 20px; padding: 24px; box-shadow: 0 2px 16px rgba(0,0,0,0.04); text-align: center;">
+      <div style="width: 64px; height: 64px; border-radius: 50%; background: #f0f8e8; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 32px;">🌿</div>
+      <h3 style="font-size: 22px; color: #3c2a1a; font-weight: 400; margin: 12px 0 4px;">深呼吸</h3>
+      <p style="font-size: 14px; color: #a89888; margin: 0 0 20px;">每次吸气4秒、呼气6秒，重复5次</p>
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <button style="padding: 10px 24px; border-radius: 12px; border: 1.5px solid #e0d8cc; background: white; color: #8a7968; cursor: pointer; font-size: 14px;">换个试试 →</button>
+        <button style="padding: 10px 24px; border-radius: 12px; border: none; background: #c8a080; color: white; cursor: pointer; font-size: 14px;">开始行动 ✓</button>
+      </div>
+    </div>
+
+    <!-- Action buttons row -->
+    <div style="display: flex; gap: 8px; justify-content: center; margin-top: 16px;">
+      <span style="padding: 6px 14px; border-radius: 12px; background: white; font-size: 12px; color: #c8a080; border: 1px solid #e8e0d8; cursor: pointer;">❤️ 收藏</span>
+      <span style="padding: 6px 14px; border-radius: 12px; background: white; font-size: 12px; color: #a89888; border: 1px solid #e8e0d8; cursor: pointer;">👎 不感兴趣</span>
+      <span style="padding: 6px 14px; border-radius: 12px; background: #8a7968; color: white; font-size: 12px; cursor: pointer;">⚡ 最低行动</span>
+    </div>
+  </div>
+</div>
+
+<hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;" />
+
+<h2>推荐页：交互细节</h2>
+<ul>
+  <li>卡片<b>居中展示</b>，一次只展示一个推荐，减少选择焦虑</li>
+  <li>「换个试试」切换推荐时带 <b>柔和横向滑动</b>动画</li>
+  <li>底部三个操作：<b>收藏</b>（长按也行）、<b>不感兴趣</b>（该类不再出现）、<b>最低行动</b>（切换到超低门槛推荐）</li>
+  <li>不同推荐类别用不同的 icon 和底色区分（放松=绿叶、社交=气泡、成长=书本）</li>
+  <li>最低行动模式是 PRD 强调的重要功能——当用户连动都不想动时，切换到「深呼吸10秒」「喝口水」等</li>
+</ul>
+
+<p class="subtitle" style="margin-top: 16px;">首页和推荐页的设计方向 OK 吗？有什么要调整的？</p>

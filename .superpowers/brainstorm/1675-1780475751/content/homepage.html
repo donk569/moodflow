@@ -1,0 +1,89 @@
+<h2>首页：情绪选择</h2>
+<p class="subtitle">核心入口 —— 每天打开的第一屏</p>
+
+<h3>情绪圆球设计</h3>
+<p>9 种主情绪以柔和渐变圆球展示，每个颜色映射一种情绪。选中后出现强度滑杆和次情绪可选。</p>
+
+<div class="mockup">
+  <div class="mockup-header">🏠 首页 — 情绪选择</div>
+  <div class="mockup-body" style="background: #faf8f5; padding: 28px 20px; max-width: 400px; margin: 0 auto; border-radius: 24px;">
+
+    <!-- Top section -->
+    <div style="text-align: center; padding: 16px 0 28px;">
+      <p style="font-size: 13px; color: #b8a99a; letter-spacing: 1px; margin: 0;">2026.06.03 · 星期三</p>
+      <p style="font-size: 24px; color: #5c4a3a; font-weight: 300; margin: 12px 0 0; line-height: 1.4;">
+        你现在感觉如何？
+      </p>
+    </div>
+
+    <!-- Emotion balls grid - 3x3 -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; text-align: center;">
+      <div onclick="toggleSelect(this)" data-choice="happy" style="cursor: pointer;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 8px; background: radial-gradient(circle at 40% 30%, #f9d56e, #e8b730); box-shadow: 0 4px 16px rgba(232,183,48,0.25);"></div>
+        <p style="font-size: 13px; color: #8a7968; margin: 0;">开心</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="anxious" style="cursor: pointer;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 8px; background: radial-gradient(circle at 40% 30%, #f5b895, #e88a5e); box-shadow: 0 4px 16px rgba(232,138,94,0.25);"></div>
+        <p style="font-size: 13px; color: #8a7968; margin: 0;">焦虑</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="sad" style="cursor: pointer;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 8px; background: radial-gradient(circle at 40% 30%, #8eb8d6, #5c8eb8); box-shadow: 0 4px 16px rgba(92,142,184,0.25);"></div>
+        <p style="font-size: 13px; color: #8a7968; margin: 0;">难过</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="tired" style="cursor: pointer;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 8px; background: radial-gradient(circle at 40% 30%, #c8c0b8, #9e968e); box-shadow: 0 4px 16px rgba(158,150,142,0.25);"></div>
+        <p style="font-size: 13px; color: #8a7968; margin: 0;">疲惫</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="irritated" style="cursor: pointer;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 8px; background: radial-gradient(circle at 40% 30%, #d4a48c, #c08068); box-shadow: 0 4px 16px rgba(192,128,104,0.25);"></div>
+        <p style="font-size: 13px; color: #8a7968; margin: 0;">烦躁</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="empty" style="cursor: pointer;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 8px; background: radial-gradient(circle at 40% 30%, #d5d0cb, #b5b0a8); box-shadow: 0 4px 16px rgba(181,176,168,0.25);"></div>
+        <p style="font-size: 13px; color: #8a7968; margin: 0;">空虚</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="calm" style="cursor: pointer;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 8px; background: radial-gradient(circle at 40% 30%, #a8c9a0, #7aaa6e); box-shadow: 0 4px 16px rgba(122,170,110,0.25);"></div>
+        <p style="font-size: 13px; color: #8a7968; margin: 0;">平静</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="bored" style="cursor: pointer;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 8px; background: radial-gradient(circle at 40% 30%, #c8c4b6, #a8a498); box-shadow: 0 4px 16px rgba(168,164,152,0.25);"></div>
+        <p style="font-size: 13px; color: #8a7968; margin: 0;">无聊</p>
+      </div>
+      <div onclick="toggleSelect(this)" data-choice="excited" style="cursor: pointer;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 8px; background: radial-gradient(circle at 40% 30%, #f0a8b0, #e87080); box-shadow: 0 4px 16px rgba(232,112,128,0.25);"></div>
+        <p style="font-size: 13px; color: #8a7968; margin: 0;">兴奋</p>
+      </div>
+    </div>
+
+    <!-- Intensity slider -->
+    <div style="margin-top: 32px; padding: 0 8px;">
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: #b8a99a; margin-bottom: 8px;">
+        <span>轻微</span><span>中等</span><span>强烈</span>
+      </div>
+      <div style="height: 4px; background: #e8e0d8; border-radius: 2px; position: relative;">
+        <div style="width: 48%; height: 4px; background: #c8a080; border-radius: 2px;"></div>
+        <div style="width: 20px; height: 20px; border-radius: 50%; background: #fff; border: 2px solid #c8a080; position: absolute; top: -8px; left: 45%; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"></div>
+      </div>
+      <p style="text-align: center; font-size: 14px; color: #5c4a3a; margin: 16px 0 0;">强度：5</p>
+    </div>
+
+    <!-- CTA -->
+    <button class="mock-button" style="width: 100%; margin-top: 24px; padding: 16px; background: #c8a080; color: white; border: none; border-radius: 16px; font-size: 16px; cursor: pointer; letter-spacing: 0.5px;">
+      看看可以做什么 →
+    </button>
+  </div>
+</div>
+
+<hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;" />
+
+<h3>设计要点</h3>
+<ul>
+  <li>情绪球用<b>柔和渐变 + 微投影</b>，不刺眼</li>
+  <li>问题语「你现在感觉如何？」<b>温柔问候</b>，不是「请选择情绪」</li>
+  <li>强度滑杆用 <b>1-10</b>，三级提示（轻微/中等/强烈），不标注精确数字减少压力</li>
+  <li>选中情绪后圆球放大 1.2x + 底部出现柔和光晕，次情绪可出现小圆点</li>
+  <li>底部 CTA 文案用「看看可以做什么 →」而不是「下一步」</li>
+</ul>
+
+<p class="subtitle" style="margin-top: 16px;">你觉得这个首页设计方向对吗？情绪球的大小、布局、交互有没有想调整的？</p>

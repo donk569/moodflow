@@ -1,0 +1,235 @@
+<h2>日历页 + 历史页 + 我的页面</h2>
+<p class="subtitle">底部 3 个 Tab 的核心设计</p>
+
+<hr style="margin: 32px 0; border: none; border-top: 1px solid #eee;" />
+
+<h3>📅 日历页 — 情绪热力图</h3>
+
+<div class="mockup">
+  <div class="mockup-header">📅 日历 Tab</div>
+  <div class="mockup-body" style="background: #faf8f5; padding: 28px 20px; max-width: 400px; margin: 0 auto; border-radius: 24px;">
+
+    <!-- Month header -->
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 0 20px;">
+      <span style="font-size: 18px; color: #5c4a3a; font-weight: 400;">2026.06</span>
+      <div style="display: flex; gap: 8px;">
+        <span style="padding: 4px 10px; border-radius: 8px; background: white; font-size: 12px; color: #c8a080; border: 1px solid #e8e0d8;">月</span>
+        <span style="padding: 4px 10px; border-radius: 8px; background: white; font-size: 12px; color: #b8a99a; border: 1px solid #e8e0d8;">周</span>
+      </div>
+    </div>
+
+    <!-- Weekday headers -->
+    <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; margin-bottom: 8px;">
+      <span style="font-size: 11px; color: #b8a99a;">日</span><span style="font-size: 11px; color: #b8a99a;">一</span><span style="font-size: 11px; color: #b8a99a;">二</span><span style="font-size: 11px; color: #b8a99a;">三</span><span style="font-size: 11px; color: #b8a99a;">四</span><span style="font-size: 11px; color: #b8a99a;">五</span><span style="font-size: 11px; color: #b8a99a;">六</span>
+    </div>
+
+    <!-- Calendar grid (June 2026 starts on Monday) -->
+    <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center;">
+      <!-- empty cells for Sun May 31 -->
+      <span style="padding: 8px 0; color: #ddd;">31</span>
+      <!-- Mon 1 -->
+      <span style="padding: 8px 0; background: #fff8e0; border-radius: 8px; font-size: 14px; color: #5c4a3a; cursor: pointer; position: relative;">1<span style="position: absolute; bottom: 2px; left: 50%; margin-left: -3px; width: 6px; height: 6px; border-radius: 50%; background: #f9d56e;"></span></span>
+      <span style="padding: 8px 0; background: #fff0e8; border-radius: 8px; font-size: 14px; color: #5c4a3a; cursor: pointer; position: relative;">2<span style="position: absolute; bottom: 2px; left: 50%; margin-left: -3px; width: 6px; height: 6px; border-radius: 50%; background: #e88a5e;"></span></span>
+      <span style="padding: 8px 0; background: #e8f5e0; border-radius: 8px; font-size: 14px; color: #5c4a3a; cursor: pointer; position: relative;">3<span style="position: absolute; bottom: 2px; left: 50%; margin-left: -3px; width: 6px; height: 6px; border-radius: 50%; background: #7aaa6e;"></span></span>
+      <span style="padding: 8px 0; border-radius: 8px; font-size: 14px; color: #b8a99a;">4</span>
+      <span style="padding: 8px 0; border-radius: 8px; font-size: 14px; color: #b8a99a;">5</span>
+      <span style="padding: 8px 0; border-radius: 8px; font-size: 14px; color: #b8a99a;">6</span>
+      <span style="padding: 8px 0; border-radius: 8px; font-size: 14px; color: #b8a99a;">7</span>
+      <span style="padding: 8px 0; border-radius: 8px; font-size: 14px; color: #b8a99a;">8</span>
+      <span style="padding: 8px 0; border-radius: 8px; font-size: 14px; color: #b8a99a;">9</span>
+      <span style="padding: 8px 0; border-radius: 8px; font-size: 14px; color: #b8a99a;">10</span>
+      <span style="padding: 8px 0; border-radius: 8px; font-size: 14px; color: #b8a99a;">11</span>
+      <span style="padding: 8px 0; border-radius: 8px; font-size: 14px; color: #b8a99a;">12</span>
+      <span style="padding: 8px 0; border-radius: 8px; font-size: 14px; color: #b8a99a;">13</span>
+      <span style="padding: 8px 0; border-radius: 8px; font-size: 14px; color: #b8a99a;">14</span>
+      <span style="padding: 8px 0; border-radius: 8px; font-size: 14px; color: #b8a99a;">15</span>
+    </div>
+
+    <!-- Legend -->
+    <div style="display: flex; gap: 12px; justify-content: center; margin-top: 20px; font-size: 11px; color: #b8a99a;">
+      <span>🟡 开心</span><span>🟠 焦虑</span><span>🔵 难过</span><span>⚪ 疲惫</span><span>🟢 平静</span>
+    </div>
+
+    <!-- Today detail -->
+    <div style="margin-top: 20px; padding: 16px; background: white; border-radius: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+      <p style="margin: 0; font-size: 13px; color: #b8a99a;">6 月 3 日 · 今天</p>
+      <div style="display: flex; align-items: center; gap: 10px; margin-top: 8px;">
+        <span style="font-size: 28px;">😌</span>
+        <div>
+          <p style="margin: 0; font-size: 15px; color: #5c4a3a;">平静 · 强度 5</p>
+          <p style="margin: 2px 0 0; font-size: 12px; color: #b8a99a;">已完成：深呼吸</p>
+        </div>
+        <span style="margin-left: auto; padding: 4px 10px; border-radius: 8px; background: #f0f8e8; font-size: 11px; color: #7aaa6e;">已打卡</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;" />
+
+<h3>📋 历史页 — 时间线</h3>
+
+<div class="mockup">
+  <div class="mockup-header">📋 历史 Tab</div>
+  <div class="mockup-body" style="background: #faf8f5; padding: 28px 20px; max-width: 400px; margin: 0 auto; border-radius: 24px;">
+
+    <!-- Search bar -->
+    <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+      <input class="mock-input" style="flex: 1; padding: 12px 16px; border-radius: 12px; border: 1.5px solid #e8e0d8; font-size: 14px;" placeholder="🔍 搜索情绪或日期...">
+    </div>
+
+    <!-- Timeline entries -->
+    <div style="border-left: 2px solid #e8e0d8; padding-left: 20px; margin-left: 8px;">
+
+      <!-- Today -->
+      <div style="position: relative; margin-bottom: 24px;">
+        <div style="position: absolute; left: -26px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: #7aaa6e; border: 2px solid #faf8f5;"></div>
+        <p style="font-size: 11px; color: #b8a99a; margin: 0 0 6px;">今天 14:30</p>
+        <div style="background: white; border-radius: 14px; padding: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 24px;">😌</span>
+            <div style="flex: 1;">
+              <p style="margin: 0; font-size: 14px; color: #5c4a3a;">平静 · 强度 5</p>
+              <p style="margin: 2px 0 0; font-size: 12px; color: #b8a99a;">🌿 深呼吸</p>
+            </div>
+            <span style="font-size: 11px; color: #b8a99a;">→</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yesterday -->
+      <div style="position: relative; margin-bottom: 24px;">
+        <div style="position: absolute; left: -26px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: #e88a5e; border: 2px solid #faf8f5;"></div>
+        <p style="font-size: 11px; color: #b8a99a; margin: 0 0 6px;">昨天 20:15</p>
+        <div style="background: white; border-radius: 14px; padding: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 24px;">😰</span>
+            <div style="flex: 1;">
+              <p style="margin: 0; font-size: 14px; color: #5c4a3a;">焦虑 · 强度 7</p>
+              <p style="margin: 2px 0 0; font-size: 12px; color: #b8a99a;">🎵 听音乐</p>
+            </div>
+            <span style="font-size: 11px; color: #b8a99a;">→</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 days ago -->
+      <div style="position: relative; margin-bottom: 24px;">
+        <div style="position: absolute; left: -26px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: #f9d56e; border: 2px solid #faf8f5;"></div>
+        <p style="font-size: 11px; color: #b8a99a; margin: 0 0 6px;">6 月 1 日 09:00</p>
+        <div style="background: white; border-radius: 14px; padding: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 24px;">😊</span>
+            <div style="flex: 1;">
+              <p style="margin: 0; font-size: 14px; color: #5c4a3a;">开心 · 强度 8</p>
+              <p style="margin: 2px 0 0; font-size: 12px; color: #b8a99a;">☀️ 晒太阳</p>
+            </div>
+            <span style="font-size: 11px; color: #b8a99a;">→</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty state hint -->
+    <p style="text-align: center; font-size: 12px; color: #ccc; margin: 24px 0 0;">下拉加载更多...</p>
+  </div>
+</div>
+
+<hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;" />
+
+<h3>👤 我的页面</h3>
+
+<div class="mockup">
+  <div class="mockup-header">👤 我的 Tab</div>
+  <div class="mockup-body" style="background: #faf8f5; padding: 28px 20px; max-width: 400px; margin: 0 auto; border-radius: 24px;">
+
+    <!-- Profile card -->
+    <div style="display: flex; align-items: center; gap: 12px; padding: 16px; background: white; border-radius: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); margin-bottom: 20px;">
+      <div style="width: 52px; height: 52px; border-radius: 50%; background: #e8f4fd; display: flex; align-items: center; justify-content: center; font-size: 26px;">🐶</div>
+      <div>
+        <p style="margin: 0; font-size: 16px; color: #5c4a3a; font-weight: 500;">小明</p>
+        <p style="margin: 2px 0 0; font-size: 12px; color: #b8a99a;">小狗模式 · 已陪伴 7 天</p>
+      </div>
+      <span style="margin-left: auto; color: #b8a99a;">→</span>
+    </div>
+
+    <!-- Stats row -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 24px;">
+      <div style="text-align: center; padding: 14px 8px; background: white; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+        <p style="margin: 0; font-size: 22px; color: #c8a080; font-weight: 400;">7</p>
+        <p style="margin: 2px 0 0; font-size: 11px; color: #b8a99a;">连续天数</p>
+      </div>
+      <div style="text-align: center; padding: 14px 8px; background: white; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+        <p style="margin: 0; font-size: 22px; color: #c8a080; font-weight: 400;">12</p>
+        <p style="margin: 2px 0 0; font-size: 11px; color: #b8a99a;">总记录</p>
+      </div>
+      <div style="text-align: center; padding: 14px 8px; background: white; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+        <p style="margin: 0; font-size: 22px; color: #c8a080; font-weight: 400;">😌</p>
+        <p style="margin: 2px 0 0; font-size: 11px; color: #b8a99a;">常驻情绪</p>
+      </div>
+    </div>
+
+    <!-- Menu items -->
+    <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+      <div style="padding: 14px 16px; border-bottom: 1px solid #f5f0ea; display: flex; align-items: center; gap: 10px; cursor: pointer;">
+        <span style="font-size: 18px;">📊</span>
+        <span style="font-size: 14px; color: #5c4a3a;">数据统计</span>
+        <span style="margin-left: auto; color: #d0c8bc;">→</span>
+      </div>
+      <div style="padding: 14px 16px; border-bottom: 1px solid #f5f0ea; display: flex; align-items: center; gap: 10px; cursor: pointer;">
+        <span style="font-size: 18px;">🔑</span>
+        <span style="font-size: 14px; color: #5c4a3a;">AI 设置</span>
+        <span style="margin-left: auto; color: #d0c8bc;">→</span>
+      </div>
+      <div style="padding: 14px 16px; border-bottom: 1px solid #f5f0ea; display: flex; align-items: center; gap: 10px; cursor: pointer;">
+        <span style="font-size: 18px;">☁️</span>
+        <span style="font-size: 14px; color: #5c4a3a;">云同步</span>
+        <span style="margin-left: auto; font-size: 12px; color: #b8a99a;">未连接</span>
+      </div>
+      <div style="padding: 14px 16px; border-bottom: 1px solid #f5f0ea; display: flex; align-items: center; gap: 10px; cursor: pointer;">
+        <span style="font-size: 18px;">🎨</span>
+        <span style="font-size: 14px; color: #5c4a3a;">切换角色</span>
+        <span style="margin-left: auto; font-size: 12px; color: #b8a99a;">🐶 小狗</span>
+      </div>
+      <div style="padding: 14px 16px; display: flex; align-items: center; gap: 10px; cursor: pointer;">
+        <span style="font-size: 18px;">⚙️</span>
+        <span style="font-size: 14px; color: #5c4a3a;">通用设置</span>
+        <span style="margin-left: auto; color: #d0c8bc;">→</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;" />
+
+<h3>汇总</h3>
+
+<table style="width:100%; border-collapse: collapse; font-size: 14px; color: #5c4a3a;">
+  <tr style="border-bottom: 1px solid #e8e0d8;">
+    <th style="text-align: left; padding: 10px 8px; color: #b8a99a;">Tab</th>
+    <th style="text-align: left; padding: 10px 8px; color: #b8a99a;">核心</th>
+    <th style="text-align: left; padding: 10px 8px; color: #b8a99a;">交互</th>
+  </tr>
+  <tr style="border-bottom: 1px solid #f0ece8;">
+    <td style="padding: 10px 8px;">🏠 今天</td>
+    <td style="padding: 10px 8px;">情绪选择 → 推荐 → 记录</td>
+    <td style="padding: 10px 8px;">一次性纵向流转</td>
+  </tr>
+  <tr style="border-bottom: 1px solid #f0ece8;">
+    <td style="padding: 10px 8px;">📅 日历</td>
+    <td style="padding: 10px 8px;">月/周热力图 + 点击看当天</td>
+    <td style="padding: 10px 8px;">点击日期展开详情</td>
+  </tr>
+  <tr style="border-bottom: 1px solid #f0ece8;">
+    <td style="padding: 10px 8px;">📋 历史</td>
+    <td style="padding: 10px 8px;">时间线 + 搜索</td>
+    <td style="padding: 10px 8px;">下拉加载 + 点击进详情</td>
+  </tr>
+  <tr>
+    <td style="padding: 10px 8px;">👤 我的</td>
+    <td style="padding: 10px 8px;">统计 + 设置 + AI + 同步</td>
+    <td style="padding: 10px 8px;">列表式入口</td>
+  </tr>
+</table>
+
+<p class="subtitle" style="margin-top: 24px;">日历、历史、我的页面设计 OK 吗？</p>

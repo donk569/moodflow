@@ -1,0 +1,167 @@
+<h2>首页 v4：性别化动物表情</h2>
+<p class="subtitle">男生 → 小狗 + 天蓝底 / 女生 → 小猫 + 粉底</p>
+
+<div class="split">
+  <!-- MALE VERSION -->
+  <div class="mockup">
+    <div class="mockup-header">♂ 男生版 — 小狗 · 天蓝底</div>
+    <div class="mockup-body" style="background: #faf8f5; padding: 24px 16px; max-width: 400px; margin: 0 auto; border-radius: 24px;">
+
+      <!-- Gender tag -->
+      <div style="text-align: center; padding: 0 0 8px;">
+        <span style="background: #e8f4fd; padding: 4px 14px; border-radius: 12px; font-size: 12px; color: #5a8ab5;">🐶 小狗模式</span>
+      </div>
+
+      <div style="text-align: center; padding: 12px 0 20px;">
+        <p style="font-size: 22px; color: #5c4a3a; font-weight: 300; margin: 0;">
+          你现在感觉如何？
+        </p>
+      </div>
+
+      <!-- Puppy emotion grid -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; text-align: center;">
+        <div onclick="toggleSelect(this)" data-choice="happy-m" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #e8f4fd; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">🐶</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">开心</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="anxious-m" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #e8f4fd; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">🐕</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">焦虑</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="sad-m" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #e8f4fd; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">🐕‍🦺</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">难过</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="tired-m" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #e8f4fd; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">🐩</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">疲惫</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="irritated-m" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #e8f4fd; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">🦮</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">烦躁</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="empty-m" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #e8f4fd; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">🥺</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">空虚</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="calm-m" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #e8f4fd; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">🐾</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">平静</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="bored-m" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #e8f4fd; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">🦴</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">无聊</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="excited-m" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #e8f4fd; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">🐶</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">兴奋</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEMALE VERSION -->
+  <div class="mockup">
+    <div class="mockup-header">♀ 女生版 — 小猫 · 粉底</div>
+    <div class="mockup-body" style="background: #faf8f5; padding: 24px 16px; max-width: 400px; margin: 0 auto; border-radius: 24px;">
+
+      <!-- Gender tag -->
+      <div style="text-align: center; padding: 0 0 8px;">
+        <span style="background: #ffe8f0; padding: 4px 14px; border-radius: 12px; font-size: 12px; color: #c08090;">🐱 小猫模式</span>
+      </div>
+
+      <div style="text-align: center; padding: 12px 0 20px;">
+        <p style="font-size: 22px; color: #5c4a3a; font-weight: 300; margin: 0;">
+          你现在感觉如何？
+        </p>
+      </div>
+
+      <!-- Cat emotion grid -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; text-align: center;">
+        <div onclick="toggleSelect(this)" data-choice="happy-f" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #ffe8f0; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">🐱</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">开心</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="anxious-f" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #ffe8f0; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">😿</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">焦虑</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="sad-f" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #ffe8f0; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">😿</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">难过</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="tired-f" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #ffe8f0; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">🙀</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">疲惫</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="irritated-f" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #ffe8f0; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">😾</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">烦躁</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="empty-f" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #ffe8f0; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">🐈</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">空虚</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="calm-f" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #ffe8f0; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">😸</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">平静</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="bored-f" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #ffe8f0; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">🐈‍⬛</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">无聊</p>
+        </div>
+        <div onclick="toggleSelect(this)" data-choice="excited-f" style="cursor: pointer; padding: 6px; border-radius: 18px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #ffe8f0; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 34px;">😻</div>
+          <p style="font-size: 12px; color: #8a7968; margin: 6px 0 0;">兴奋</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;" />
+
+<h3>动物表情说明</h3>
+
+<p>目前 mockup 用了系统 emoji 近似表达。实际 App 需要一套<b>自定义小狗/小猫插画</b>，每种情绪有对应的可爱表情：</p>
+
+<div class="cards">
+  <div class="card" data-choice="custom" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>🐾 小狗情绪包（9 种）</h3>
+      <p>开心摇尾巴 / 焦虑耷耳朵 / 难过趴着 / 疲惫打哈欠 / 烦躁皱眉 / 空虚发呆 / 平静闭眼 / 无聊玩骨头 / 兴奋扑跳</p>
+    </div>
+  </div>
+  <div class="card" data-choice="emoji" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>😺 小猫情绪包（9 种）</h3>
+      <p>开心眯眼 / 焦虑炸毛 / 难过垂尾 / 疲惫瘫倒 / 烦躁甩尾 / 空虚望窗外 / 平静呼噜 / 无聊玩毛线 / 兴奋竖尾</p>
+    </div>
+  </div>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>用现成 sticker 包</h3>
+      <p>Flutter 有 sticker 相关包，找一套现成小狗小猫表情 sticker 集成</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>设计师画 SVG/Lottie</h3>
+      <p>定制 18 个（9狗+9猫）矢量插画，微动画，品质最高但成本也高</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>AI 生成 + 人工修图</h3>
+      <p>用 Midjourney/DALL·E 生成小狗小猫表情包，设计师调色统一风格</p>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top: 16px;">男生小狗·天蓝 / 女生小猫·粉底，这个方向 OK 吗？动物表情包你倾向哪个方案？</p>
