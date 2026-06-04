@@ -1,0 +1,62 @@
+name: Build Release APK
+
+on:
+  push:
+    tags:
+      - 'v*'               # 推送 v1.0.0 这类 tag 时触发
+  workflow_dispatch:        # 也支持手动触发
+
+jobs:
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.38.6'
+          channel: 'stable'
+          cache: true
+
+      - name: Verify Flutter
+        run: flutter --version
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build release APK
+        run: flutter build apk --release
+
+      - name: Get tag name
+        id: tag
+        run: echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "MoodFlow ${{ steps.tag.outputs.tag }}"
+          body: |
+            ## 🌸 MoodFlow ${{ steps.tag.outputs.tag }}
+
+            情绪陪伴日记 - 记录心情，温柔生活
+
+            ### 安装方式
+            下载下方 `moodflow-release.apk`，在 Android 设备上直接安装
+
+            ### 更新内容
+            详见提交历史
+          files: build/app/outputs/flutter-apk/app-release.apk
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
