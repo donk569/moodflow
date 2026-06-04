@@ -8,6 +8,7 @@ class RecommendState {
   final bool isMinimalMode;
   final Set<String> favorites;
   final Set<String> hidden;
+  final List<Activity>? normalActivities;
 
   const RecommendState({
     this.currentActivity,
@@ -16,6 +17,7 @@ class RecommendState {
     this.isMinimalMode = false,
     this.favorites = const {},
     this.hidden = const {},
+    this.normalActivities,
   });
 
   RecommendState copyWith({
@@ -25,6 +27,7 @@ class RecommendState {
     bool? isMinimalMode,
     Set<String>? favorites,
     Set<String>? hidden,
+    List<Activity>? normalActivities,
   }) {
     return RecommendState(
       currentActivity: currentActivity ?? this.currentActivity,
@@ -33,6 +36,7 @@ class RecommendState {
       isMinimalMode: isMinimalMode ?? this.isMinimalMode,
       favorites: favorites ?? this.favorites,
       hidden: hidden ?? this.hidden,
+      normalActivities: normalActivities ?? this.normalActivities,
     );
   }
 }
@@ -53,6 +57,7 @@ class RecommendNotifier
         currentActivity: activities.first,
         currentIndex: 0,
         isMinimalMode: false,
+        normalActivities: null,
       );
     }
   }
@@ -89,14 +94,28 @@ class RecommendNotifier
   }
 
   void enableMinimalMode() {
-    final minimalActions =
-        RecommendEngine.getMinimalActions();
-    state = state.copyWith(
-      isMinimalMode: true,
-      activities: minimalActions,
-      currentActivity: minimalActions.first,
-      currentIndex: 0,
-    );
+    if (state.isMinimalMode) {
+      // Exit minimal mode — restore normal activities
+      final normal = state.normalActivities ?? state.activities;
+      state = state.copyWith(
+        isMinimalMode: false,
+        activities: normal,
+        currentActivity: normal.isNotEmpty ? normal.first : null,
+        currentIndex: 0,
+        normalActivities: null,
+      );
+    } else {
+      // Enter minimal mode — save current activities for restore
+      final minimalActions =
+          RecommendEngine.getMinimalActions();
+      state = state.copyWith(
+        isMinimalMode: true,
+        activities: minimalActions,
+        currentActivity: minimalActions.first,
+        currentIndex: 0,
+        normalActivities: state.activities,
+      );
+    }
   }
 }
 
